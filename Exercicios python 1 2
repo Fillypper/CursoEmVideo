@@ -1,0 +1,935 @@
+# Exercicio 1
+print('Olá, mundo!')
+
+# Exercicio 2
+nome = input('Qual o seu nome?: ')
+print('Muito prazer em conhecer você {}'.format(nome))
+
+# Exercicio 3
+n1 = int(input('Digite o primeiro valor: '))
+n2 = int(input('Digite o segundo valor: '))
+r = int(n1+n2)
+
+print('A soma de {} e {} é igual a {}'.format(n1, n2, r))
+
+# Exercicio 3
+algo = input('Digite algo: ')
+print('O tipo primitivo desse valor/palavra é ', type(algo))
+print('É composto é alfabetico?', algo.isalpha())
+print('É composto por letras minusculas?', algo.islower())
+print('Está em letras maiúsculas?', algo.isupper())
+print('É um numero?', algo.isnumeric())
+print('É alfanumérico?', algo.isalnum())
+print('É uma palavras/numero printavel?', algo.isprintable())
+print('Tem casas decimais?', algo.isdecimal())
+print('É composto de somente espaços?', algo.isspace())
+print('Tem a primeira letra maiúscula?', algo.istitle())
+print('É um digito?', algo.isdigit())
+
+# Exercicio 4
+"""
+Faça um programa que leia um numero inteiro e mostre na tela o seu sucessor e seu antecessor
+"""
+
+n1 = int(input('Digite um numero: '))
+print('Seu numero é {} o seu antecessor é {} e o seu sucessor é {}'.format(n1, (n1-1), (n1+1)))
+
+#Usar variaveis para caso o antecessor e sucessor forem utilizados mais vezes
+
+# Exercicio 5
+"""
+Crie um algoritmo que leia um numero e mostre o seu dobro, triplo e raiz quadrada.
+"""
+
+n1 = int(input('Digite seu número: '))
+print('O seu numero é {}\nO drobro do seu numero é {}'.format(n1, (n1*2)))
+print('O triplo do seu numero é {}\nE a raiz quadrada do seu numero é {:.2f}'.format(n1*3, (n1**(1/2))))
+
+
+# Exercicio 6
+"""
+Desenvolva um programa que leia as duas notas de um aluno, calcule e mostre a sua média.
+"""
+
+n1 = float(input('Digite a primeira nota do aluno: '))
+n2 = float(input('Segunda nota do aluno: '))
+m = n1+n2
+#m = (n1+n2)/2
+
+print('A média das notas do aluno é {:.1f}'.format(m/2))
+#print('A média das notas do aluno é {:.1f}'.format(m))
+
+# Exercicio 7
+
+"""
+Escreva um programa que leia um valor em metros e o exiba convertido em centimentros e milimetros.
+"""
+
+m = float(input('Digite a quantidade de metros que deseja converter: '))
+c = m * 100
+mi = m * 1000
+hm = m / 100
+km = m / 1000
+dm = m * 10
+dam = m / 10
+
+print('{} esse valor em metros, equivale a {} centimetros e {} milimetros'.format(m, c, mi))
+print('{}m, equivale a {} hectômetros'.format(m, hm))
+print('{}m, equivale a {} quilômetros'.format(m, km))
+print('{}m, equivale a {} decímetros'.format(m, dm))
+print('{}m, equivale a {} decâmetros'.format(m, dam))
+
+# Exercicio 8
+"""
+Faça um programa que leia um numero inteiro qualquer e mostre na tela sua tabuada.
+"""
+
+t = int(input('Qual tabuada você deseja saber?: '))
+print('-'* 12)
+print('{} x {:2} ={}'.format(t, 1, t*1))
+print('{} x {:2} ={}'.format(t, 2, t*2))
+print('{} x {:2} ={}'.format(t, 3, t*3))
+print('{} x {:2} ={}'.format(t, 4, t*4))
+print('{} x {:2} ={}'.format(t, 5, t*5))
+print('{} x {:2} ={}'.format(t, 6, t*6))
+print('{} x {:2} ={}'.format(t, 7, t*7))
+print('{} x {:2} ={}'.format(t, 8, t*8))
+print('{} x {:2} ={}'.format(t, 9, t*9))
+print('{} x {:2} ={}'.format(t, 10, t*10))
+print('-'* 12)
+
+#(:2) Quer dizer q a formatação será mostra em 2 digitos
+
+# Exercicio 9
+"""
+Crie um programa que leia quanto dinheiro uma pessoa tem na carteira e mostre quantos dólares ela pode comprar.
+
+Considere
+US$1,00 = R$3,27
+"""
+
+real = float(input('Quantos R$ você tem na carteira? R$'))
+dolar = real / 5.33
+euro = real / 6.10
+libra = real / 7.21
+print('Com o valor de R${}, você pode trocar por US${:.2f} '.format(real, dolar))
+print('Com o valor de R${}, você pode comprar €{:.2f}'.format(real, euro))
+print('Com o valor de R${}, você pode comprar £{:.2f}'.format(real, libra))
+
+
+# Exercicio 10
+"""
+Faça um programa que leia a largura e a altura de uma parede em metros, calcule a sua área e a quantidade de tinta
+necessária para pintá-la. sabendo que cada litro de tinta pinta uma área de 2m².
+"""
+
+la = float(input('Qual a largura da sua parede?: '))
+al = float(input('Qual a altura da sua parede?: '))
+ar = la*al
+t = ar/2
+
+print('A sua parede de {} metros de altura e {} metros de largura, e area de {}m²'. format(al, la, ar))
+print('Precisa de {}L de tinta para pintar toda a area'.format(t))
+
+
+# Exercicio 11
+"""
+Faça um algoritmo que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.
+"""
+
+p = float(input('Qual é o preço do produto? R$'))
+d = p * (5/100)
+desc = p - d
+
+print('O preço do produto é {:.2f}, e com o desconto de 5% ele sai por {:.2f}'.format(p, desc))
+
+
+# Exercicio 12
+"""
+Faça um algoritmo que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+"""
+
+s = float(input('Qual é o seu salário?: '))
+p = 15/100
+a = s*p
+
+print('O seu salário é de R${:.2f} e teve um aumento de 15% indo para R${:.2f}'.format(s, s+a))
+
+# Exercicio 13
+"""
+Escreva um programa que converta uma temperatura digitando em graus Celsius e converta para graus Fahrenheit.
+"""
+
+cel = float(input('Qual a temperatura em °C?: '))
+fah = ((9 * cel) / 5) + 32
+
+print('A temperatura em {}°C corresponde em {}°F'.format(cel, fah))
+
+# Exercicio 14
+"""
+Escreva um programa que pergunte a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais
+ ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por Km rodado
+"""
+
+carro = int(input('Quantos dias alugado?: '))
+dis = float(input('Quantos km foram rodados?: '))
+
+dias = carro*60
+km = dis*0.15
+total = dias + km
+
+print('O total a pagar é de R${.:2f}'.format(total))
+
+# Exercicio 15
+"""
+Crie um programa que leia um número real qualquer pelo teclado e mostre na tela sua porção inteira
+Ex: Digite um número: 6.127
+O número 6.127 tem a parte inteira 6.
+"""
+
+from math import trunc
+
+num = float(input('Digite um numero com casas decimais: '))
+inteiro = trunc(num)
+
+print('O valor digitado foi {} e sua porção inteira é {}'.format(num, inteiro))
+
+# Exercicio 16
+"""
+Faça um programa que leia o comprimeito do cateto oposto e do cateto adjacente de um retângulo, calcule
+e mostre o comprimento da hipotenusa.
+"""
+
+from math import hypot
+
+ca = float(input('Digite o cateto adjacente: '))
+co = float(input('Digite o cateto oposto: '))
+h = hypot(ca, co)
+
+print('O valor da hipotenusa é {:.2f}'.format(h))
+
+# Exercicio 17
+"""
+Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangante desse ângulo.
+"""
+import math
+
+grau = int(input('Digite um ângulo: '))
+
+coseno = math.cos(math.radians(grau))
+tangente = math.tan(math.radians(grau))
+seno = math.sin(math.radians(grau))
+
+print('O seno de {}°, é {:.2f}'.format(grau, seno))
+print('O coseno de {}°, é {:.2f}'.format(grau, coseno))
+print('A tangente de {}°, é {:.2f}'.format(grau, tangente))
+
+# Exercicio 18
+"""
+Um professor quer sortear um dos seus quatro alunos para apagar o quadro, Faça um programa que ajude ele,
+lendo o nome deles e escrevendo o nome escolhido.
+"""
+
+from random import choice
+
+a1 = str(input('Qual o nome do primeiro aluno?: '))
+a2 = str(input('Segundo aluno?: '))
+a3 = str(input('Terceiro aluno?: '))
+a4 = str(input('Quarto aluno?: '))
+
+sorteio = [a1, a2, a3, a4]
+escolhido = choice(sorteio)
+
+print('O aluno escolhido foi {}'.format(escolhido))
+
+# Exercicio 19
+"""
+O mesmo professor do desafio anterior quer sortear a ordem de apresentação de trabalhos dos alunos.
+Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
+"""
+import random
+from random import shuffle
+
+'''g1 = str(input('Digite o nome do primeiro grupo: '))
+g2 = str(input('Segundo grupo: '))
+g3 = str(input('Terceiro grupo: '))
+g4 = str(input('Quarto grupo: '))
+
+ordem = [g1, g2, g3, g4]
+
+sorteio = shuffle(ordem)
+
+print('A lista de escolhidos é')
+print(ordem)'''
+
+c1 = str(input('Qual conta iremos pagar esse mês: '))
+c2 = str(input('Digite outra conta: '))
+c3 = str(input('Digite outra conta: '))
+
+contas = [c1, c2, c3]
+
+shuffle(contas)
+
+print('A ordem das contas que iremos pagar são: ')
+print(contas)
+
+# Exercicio 20
+"""
+Faça um programa em python que abra e reproduza o aúdio de um arquivo mp3.
+"""
+
+import pygame
+pygame.init()
+pygame.mixer.music.load('212.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+
+# Exercicio 21
+"""
+Crie um programa que leia o nome completo de uma pessoa e mostre:
+
+-> O nome com todas as letras maiúsculas
+-> O nome com todas as letras minúsculas
+-> Quantas letras ao todo (Sem considerar espaços)
+-> Quantas letras tem o primeiro nome
+"""
+
+nome = str(input('Digite seu nome: '))
+
+pn = nome.split()
+
+print('Analisando o seu nome...')
+print('Seu nome em maiúsculo é {}.'.format(nome.upper()))
+print('Seu nome em minúsculo é {}.'.format(nome.lower()))
+print('Seu nome tem {} letras.'.format(len(nome) - nome.count(' ')))
+print('Seu primeiro nome tem {} letras.'.format(len(pn[0])))
+
+# Exercicio 22
+"""
+Faça um programa que leia um numero de 0 a 9999 e mostre na tela cada um dos digitos separados
+
+EX:
+Digite um numer: 1834
+
+Unidade:4
+dezena:3
+centena:8
+milhar:1
+"""
+num = int(input('Digite um número com 4 digitos: '))
+
+u = num // 1 % 10
+d = num // 10 % 10
+c = num // 100 % 10
+m = num // 1000 % 10
+
+print('Analisando seu numero...')
+print('A unidade é {}'.format(u))
+print('A dezena é {}'.format(d))
+print('A centena é {}'.format(c))
+print('O milhar é {}'.format(m))
+
+# Exercicio 23
+"""
+Crie um programa que leia o nome de uma cidade e se ela começa ou não com o nome "Santo"
+
+
+cidade = str(input('Qual o nome da sua cidade?: ')).strip()
+
+print(cidade[:5].upper() == 'SANTO')
+"""
+
+carro = str(input('Qual carro da honda você tem: ')).strip()
+
+print(carro[:5].lower() == 'civic')
+
+# Exercicio 24
+"""
+Crie um programa que leia o nome de uma pessoa e diga se ela tem "Silva" no nome.
+
+nome = str(input('Digite seu nome: ')).strip()
+print('Seu nome tem silva: {}'.format('silva' in nome.lower()))
+"""
+
+nome = str(input('Digite um texto: '))
+
+print('Esse texto tem a palavra legal?: {}'.format('legal' in nome.lower()))
+
+
+# Exercicio 25
+"""
+Faça um programa que leia uma frase pelo teclado e mostre:
+
+-> Quantas vezes aparece a letra "A".
+-> Em que posição ela aparece a primeira vez.
+-> Em que posição ela aparece a última vez.
+"""
+
+frase = str(input('Digite uma frase: ')).strip()
+
+a = frase.lower().count('a')
+a1 = frase.lower().find('a')
+a2 = frase.lower().rfind('a')
+
+print('A letra a, aparece {} vezes'.format(a))
+print('Ela aparece a primeira vez na posição {}'.format(int(a1)+1))
+print('E pela ultima vez na posição {}'.format(int(a2)+1))
+
+# Exercicio 26
+"""
+Faça um programa que leia o nome completo de uma pessoa, motrando em seguida o primeiro e o ultimo separadamente.
+
+Ex: Ana Maria de Souza
+Primeiro = Ana
+Último = Souza
+
+
+nome = str(input('Digite seu nome completo: ')).strip()
+
+pn = nome.split()
+print('Seu primeiro nome é {}'.format(nome[0]))
+print('E seu ultimo nome é {}'.format(pn[len(pn)-1]))
+"""
+
+nome = str(input('Digite seu nome Completo: ')).strip()
+
+lista = nome.split()
+
+print('Muito prazer.')
+print('Seu primeiro nome é {}'.format(lista[0]))
+print('Seu último nome é {}'.format(lista[len(lista)-1]))
+
+# Exercicio 27
+"""
+Escreva um programa que faça o computador "pensar" em um numero inteiro de 0 e 5 e peça para o usuário tentar descobrir
+qual foi o número escolhido pelo computador.
+
+O programa deverá escrever na tela se o usuário venceu ou perdeu.
+"""
+
+from random import randint
+print('-=-'*20)
+num = int(input('Tente acertar o numero da maquina: '))  # Jogador escreve um numero
+random = randint(0, 5)  # O programa sorteia o numero de 0 a 5
+
+if num == random:  # Comando pra se tiver acetado o numero
+    print('Parabéns, você acertou o numero é {}'.format(random))
+else:
+    print('Você errou o numero, tente novamente!')  # Comando para se errar o numero
+
+# Exercicio 28
+"""
+Escreva um programa que leia a velocidade de um carro.
+
+Se ele ultrapassar 80km/h, mostre uma mensagem dizendo que ele foi multado.
+
+A multa vai custar R$7,00 por cada Km acima do limite.
+"""
+
+vel = float(input('Qual a velocidade do veiculo?: '))
+
+mul = (vel - 80) * 7
+
+if vel >= 80:
+    print('Você foi multado,ultrapassou o limite de velocidade 80Km/h, valor a ser pago é de R${:.2f}'.format(mul))
+else:
+    print('Você está dentro da velocidade permitida!')
+
+# Exercicio 29
+"""
+Crie um programa que leia um número inteiro e mostre na tela se ele é PAR ou ÍMPAR.
+"""
+
+num = int(input('Digite seu numero: '))
+
+par = num % 2
+
+if par == 0:
+    print('Seu numero é par!')
+else:
+    print('Seu numero é ímpar!')
+
+# Exercicio 30
+"""
+Desenvolva um programa que pergunte a distância de uma viagem em Km.
+Calcule o preço da passagem, cobrando R$0,50 por Km para viagens de até 200Km e R$0,45 para viagens mais longas.
+"""
+
+dis = float(input('Qual a distância da viagem?: '))
+
+if dis >= 200:
+    print('O preço da passagem é R${:.2f}'.format(dis  * 0.45))
+else:
+    print('O preço da passagem é R${:.2f}'.format(dis * 0.50))
+
+# Exercicio 31
+"""
+Faça um programa que leia um ano qualquer e mostre se é um ano bissexto
+
+Pesquisar sobre ano bissexto
+"""
+from datetime import date
+
+ano = int(input('Digite o ano: '))
+bi = ano % 4 and ano % 100 != 0 or ano % 400 == 0
+if ano == 0:
+    ano = date.today().year
+if bi:
+    print('Esse ano {}, é um ano bissexto!'.format(ano))
+else:
+    print('Esse não é um ano bissexto!')
+    
+# Exercicio 32
+"""
+Faça um programa que leia 3 numeros e mostre qual é o maior e o menor numero
+"""
+
+n1 = int(input('Digite o primeiro número: '))
+n2 = int(input('Digite o segundo número: '))
+n3 = int(input('Digite o terceiro numero: '))
+
+# Verificando o numero menor
+menor = n1
+if n2 < n1 and n2 < n3:
+    menor = n2
+if n3 < n2 and n3 < n1:
+    menor = n3
+print('O menor número é {}'.format(menor))
+
+# Verificando o número maior
+maior = n2
+if n1 > n2 and n1 > n3:
+    maior = n1
+if n3 > n2 and n3 > n1:
+    maior = n3
+print('O maior número é {}'.format(maior))
+
+# Exercicio 33
+"""
+Escreva um programa que pergunte o salário de um funcionário e calcule o valor do seu aumento.
+Para salários superiores a R$1.250,00, calcule um aumento de 10%
+Para os inferiores ou iguais, o aumento é de 15%
+"""
+
+sal = float(input('Digite um salário: '))
+
+dez = (10/100) * sal
+quin = (15/100) * sal
+
+if sal >= 1250:
+    print('Você terá um aumento de 10% ou seja R${}, e um total de R${}'.format(dez, sal+dez))
+else:
+    print('Você terá um aumento de 15% ou seja R${}, e um total de R${}'.format(quin, quin+sal))
+
+# Exercicio 34
+"""
+Desenvolva um programa que leia o comprimento de três retas e diga ao usuário se ele pode ou não formar um triângulo
+
+Pesquisar como se forma um triangulo
+"""
+print('=-' * 20)
+print(' ' * 5, 'Analisador de triângulos', ' ' * 5)
+print('=-' * 20)
+l1 = int(input('Digite o tamanho em cm do primeiro lado: '))
+l2 = int(input('Do segundo lado: '))
+l3 = int(input('Do terceiro lado: '))
+
+if l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2:
+    print('Você tem um triângulo!')
+else:
+    print('Você não tem um triângulo!')
+
+# Exercicio 35
+"""
+Escreva um programa para aprovar um empréstimo bancário para compra de uma casa. O programa vai perguntar o
+valor da casa, o salário do comprador e em quantos anos ele vai pagar.
+Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário, então o emprestimo será negado.
+"""
+
+casa = float(input('Digite o valor da casa: R$'))
+salario = float(input('Digite seu salário: R$'))
+anos = int(input('Em quantos anos irá pagar?: '))
+prest = casa / (anos * 12)
+
+
+if prest <= 30/100*salario:
+    print('Você está apto para o empréstimo, e suas parcelas serão de R${:.2f} mensais.'.format(prest))
+else:
+    print('Emprestimo negado, o valor da parcela ultrapaça 30% do seu salário!')
+
+
+# Exercicio 36
+"""
+Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão:
+- 1 para binário
+- 2 para octal
+- 3 para hexadecimal
+"""
+
+num = int(input('Digite um número inteiro: '))
+print('''Escolha uma das bases de conversão
+[ 1 ] converter em BINÁRIO
+[ 2 ] converter em OCTAL
+[ 3 ] converter em HEXADECIMAL''')
+
+opcao = int(input('Sua opção: '))
+if opcao == 1:
+    print('{} convertido para BINÁRIO é igual a {}'.format(num, bin(num)))
+elif opcao == 2:
+    print('{} convertido em OCTAL é {}'.format(num, oct(num)))
+elif opcao == 3:
+    print('{} convertido em HEXADECIMAL é {}'.format(num, hex(num)))
+else:
+    print('OPÇÃO INVALIDA!!')
+
+# Exercicio 37
+"""
+Escreva um programa que leia dois números inteiros e compare-os mostrando na tela uma mensagem:
+- O primeiro valor é maior
+- O segundo valor é maior
+- Não existe valor maior os dois são iguais.
+"""
+
+valor1 = int(input('Digite um número: '))
+valor2 = int(input('Digite mais um número: '))
+
+if valor1 > valor2:
+    print('O PRIMEIRO valor é MAIOR'.format(valor1, valor2))
+elif valor1 == valor2:
+    print('Os valores são IGUAIS!')
+else:
+    print('O SEGUNDO valor é MAIOR'.format(valor2, valor1))
+    
+# Exercicio 38
+ """
+Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com a sua idade:
+- Se ele ainda vai se alistar no serviço militar.
+- Se é a hora de se alistar.
+- Se já passou do tempo do alistamento
+Seu programa também deverá mostrar o tempo que falta ou que passou o prazo
+
+
+ano = int(input('Qual ano você nasceu?: '))
+idade = 2022 - ano
+
+if idade == 18:
+    print('Você tem que se alistar esse ano!')
+elif idade < 18:
+    print('Ainda não chegou a hora de se alistar, faltam {} anos para se alistar!'.format(18 - idade))
+elif idade > 18:
+    print('O tempo de alistamento passou à {} anos!'.format(idade - 18))
+
+
+from datetime import date
+atual = date.today().year
+nasc = int(input('Ano de nascimento: '))
+idade = atual - nasc
+print('Quem nasceu em {} tem {} anos em {}.'.format(nasc, idade, atual))
+if idade == 18:
+    print(('Você tem que se alistar IMEDIATAMENTE!'))
+elif idade < 18:
+    print('Você ainda não está na idade de ALISTAMENTO!')
+    print('Seu alistamento vai ser em {}'.format((18 - idade) + atual))
+else:
+    print('O tempo de alistamento PASSOU há {} anos'.format(idade - 18))
+    print('Seu alistamento foi em {}'.format(atual - (idade - 18)))
+"""
+
+from datetime import date
+
+ano = int(input('Digite o ano de nascimento: '))
+sexo = str(input('Qual o seu sexo? ')).lower()
+atual = date.today().year
+idade = atual - ano
+if sexo == 'feminino':
+    print('Você não tem alistamento OBRIGATÓRIO!')
+elif sexo == 'masculino' and idade == 18:
+    print('Você deve ir se alistar IMEDIATAMENTE!')
+elif sexo == 'masculino' and idade < 18:
+    print('Você tem {} anos, ainda tem precisa se alistar!'.format(idade))
+    print('Seu alistamento será em {}'.format((18 - idade) + atual))
+elif sexo == 'masculino' and idade > 18:
+    print('Você ja passou do tempo de ALISTAMENTO há {} anos'.format(idade - 18))
+
+# Exercicio 39
+ """
+Crie um programa que leia duas notas de um aluno e calcule sua média, mostrando uma mensagem no final,
+de acordo com a média atingida:
+- Média abaixo de 5.0: REPROVADO
+- Média entre 5.0 e 6.9: RECUPERAÇÃO
+- Média 7.0 ou superior: APROVADO
+
+
+nota1 = float(input('Digite a primeira nota do aluno: '))
+nota2 = float(input('Digite a segunda nota: '))
+if (nota1 + nota2) / 2 < 5.0:
+    print('Com {} e {}, a média do aluno é {:.1f}'.format(nota1, nota2, (nota1 + nota2) / 2))
+    print('Aluno REPROVADO')
+elif (nota1 + nota2) / 2 == 5:
+    print('Com {} e {}, a média do aluno é {:.1f}'.format(nota1, nota2, (nota1 + nota2) / 2))
+    print('Aluno em RECUPERAÇÃO')
+elif (nota1 + nota2) / 2 <= 6.9:
+    print('Com {} e {}, a média do aluno é {:.1f}'.format(nota1, nota2, (nota1 + nota2) / 2))
+    print('Aluno em RECUPERAÇÃO')
+elif (nota1 + nota2) / 2 >= 7.0:
+    print('Com {} e {}, a média do aluno é {:.1f}'.format(nota1, nota2, (nota1 + nota2) / 2))
+    print('O aluno foi APROVADO!')
+"""
+
+nota1 = float(input('Digite a primeira nota do aluno: '))
+nota2 = float(input('Digite a segunda nota: '))
+média = (nota1 + nota2) / 2
+
+print('Tirando {:.1f} e {:.1f}, sua média é {:.1f}'.format(nota1, nota2, média))
+if média <=5:
+    print('O aluno foi REPROVADO!')
+elif média > 5 and média <= 6.9:
+    print('O aluno está em RECUPERAÇÃO!')
+elif média >= 7:
+    print('O aluno foi APROVADO!')
+
+# Exercicio 40
+"""
+A Confederação Nacional de Natação precisa de um programa que leia o ano de nascimento de um atleta e mostre
+sua categoria, de acordo com a idade:
+- Até 9 anos: MIRIM
+- Até 14 anos: INFANTIL
+- Até 19 anos: JUNIOR
+- Até 25 anos: SÊNIOR
+- Acima: MASTER
+
+
+idade = int(input('Digite o seu ano de nascimento: '))
+ano = 2022 - idade
+print('O atleta tem {} anos'.format(ano))
+if ano <= 9:
+    print('Seu atleta é MIRIM!')
+elif ano <= 14:
+    print('Seu atleta é INFANTIL!')
+elif ano <= 19:
+    print('Seu atleta é JUNIOR!')
+elif ano <= 25:
+    print('Seu atleta é SÊNIOR!')
+elif ano > 25:
+    print('Seu atleta é MASTER')
+"""
+
+from datetime import date
+
+atual = date.today().year
+ano = int(input('Digite seu ano de nascimento: '))
+idade = atual - ano
+
+print('Seu atleta tem {} anos.'.format(idade))
+if idade <= 9:
+    print('Seu atleta é MIRIM!')
+elif idade <= 14:
+    print('Seu atleta é INFANTIL!')
+elif idade <= 19:
+    print('Seu atleta é JUNIOR!')
+elif idade <= 25:
+    print('Seu atleta é SÊNIOR!')
+else:
+    print('Seu atleta é MASTER!')
+
+
+# Exercicio 41
+"""
+Reforça o 035 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+- Equilátero: todos os lados iguais
+- Isósceles: dois lados iguais
+- Escaleno: todos os lados diferentes
+
+ # Deu errado
+
+tri = int(input('Digite a primeira medida do triângulo: '))
+tri1 = int(input('Segunda medida: '))
+tri2 = int(input('Terceira medida: '))
+
+if tri == tri1 or tri1 == tri2 or tri2 == tri:
+    print('Você tem um triângulo equilátero!')
+elif tri == tri1 and tri != tri2 or tri1 == tri2 and tri1 != tri or tri2 == tri and tri2 != tri1:
+    print('Você tem um triângulo isóceles!')
+elif tri != tri1 or tri1 != tri2 or tri2 != tri:
+    print('Você tem um triângulo escaleno')
+"""
+
+s1 = float(input('Digite o primeiro segmento: '))
+s2 = float(input('Digite o segundo segmento: '))
+s3 = float(input('Digite o terceiro segmento: '))
+
+if s1 < s2 + s3 and s2 < s3 + s1 and s3 < s1 + s2:
+    print('Os segmentos podem formar um triângulo ', end='')
+    if s1 == s2 ==s3:
+        print('EQUILÁTERO')
+    elif s1 != s2 != s3 != s1:
+        print('ESCALENO')
+    else:
+        print('ISÓCELES')
+else:
+    print(('Não podem formar um triângulo'))
+
+# Exercicio 42
+"""
+Desenvolva uma lógica que leia o peso e a aultura de uma pessoa, calcule seu IMC e mostre seu status,
+de acordo com a tabela abaixo:
+- Abaixo de 18.5: Abaixo do peso
+- Entre 18.5 e 25: Peso ideal
+- 25 até 30: Sobrepeso
+- 30 até 40: Obesidade
+- Acima de 40: Obesidade mórbida
+Procurar formula simples
+"""
+
+
+peso = float(input('Digite seu peso? ()KG: '))
+altura = float(input('Digite sua altura? (M): '))
+
+imc = peso / (altura ** 2)
+
+if imc <= 18.5:
+    print('Seu imc é {:.1f}, E você está abaixo do peso!'.format(imc))
+elif imc <= 25:
+    print('Seu imc é {:.1f}, E você está no peso ideal!'.format(imc))
+elif imc <= 30:
+    print('Seu imc é {:.1f}, E você está em sobrepeso!'.format(imc))
+elif imc <= 40:
+    print('Seu imc é {:.1f}, E você está com obesidade!'.format(imc))
+else:
+    print('Seu imc é {:.1f}, E você está com obesidade morbida!'.format(imc))
+
+
+# Exercicio 43
+"""
+Ela bore um programq ue calcule o valor a ser pago por um produto considerando o seu preço normal e condição de pagamento:
+- À vista dinheiro/cheque: 10% desconto
+- Á vista no cartão: 5% de desconto
+- Em até 2x no cartão: preço normal
+- 3x ou mais no cartão : 20% de juros
+
+
+preco = float(input('Digite o valor do produto: '))
+dez = 10/100 * preco
+cinco = 5/100 * preco
+tresx = 20/100 * preco
+
+print('O valor do produto é {}'.format(preco))
+print('O produto à vista no dinheiro ou cheque sai por {}'.format(preco - dez))
+print('O produto à vista no cartão sai por {}'.format(preco - cinco))
+print('O produto em até 2x no cartão sai por {}'.format(preco))
+print('O produto em 3x ou mais no cartão sai por {}'.format(preco + tresx))
+"""
+
+valor = float(input('Qual o valor da compra?:R$ '))
+print('''FORMAS DE PAGAMENTO:
+[ 1 ] Á vista no dinheiro/cheque
+[ 2 ] Á vista no cartão
+[ 3 ] Em até 2x no cartão
+[ 4 ] Em 3x ou mais no cartão
+''')
+opção = int(input('Qual opção deseja?: '))
+
+if opção == 1:
+    desc10 = valor - (valor * 10 / 100)
+    print('Você escolheu a opção 1, pagamentos á vista tem 10% de desconto')
+    print('O valor dos produtos são R${:.2f} e ficam por R${:.2f}'.format(valor, desc10))
+elif opção == 2:
+    desc5 = valor - (valor * 5 / 100)
+    print('Você escolheu a opção 2, pagamentos á vista no cartão tem 5% de desconto')
+    print('O valor dos produtors são R${:.2f} e ficam por R${:.2f}'.format(valor, desc5))
+elif opção == 3:
+    print('Você escolheu a opção 3, Para pagamentos em até 2x SEM JUROS')
+    print('O valor dos produtos ficam R${:.2f}'.format(valor))
+elif opção == 4:
+    vezes = int(input('Em quantas vezes deseja pagar?: '))
+    vezesx = valor + (valor * 20 /  100)
+    parcelas = vezesx / vezes
+    print('Você escolheu pagar em {}x'.format(vezes))
+    print('O valor dos produtos eram {}, parcelando em {}x eles passam a ser R${} COM JUROS'.format(valor, vezes, vezesx))
+    print('Com parcelas de R${} ao mês'.format(parcelas))
+else:
+    preço = valor
+    print('\033[31mOPÇÃO INVALIDA, tente novamente!\033[m')
+    
+# Exercicio 44
+"""
+Crie um programa que faça o computador jogar jokenpô com você.
+"""
+
+from random import randint
+from time import sleep
+
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+
+print('''ESCOLHA UMA DAS OPÇÕES
+[ 0 ] Pedra
+[ 1 ] Papel
+[ 2 ] Tesoura
+''')
+escolha = int(input('Qual é a sua jogada?: '))
+sleep(1)
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+sleep(1)
+print('=-'*10)
+print('Computador jogou {}'.format(itens[computador]))
+print('Jogador jogou {}'.format(itens[escolha]))
+print('=-'*10)
+
+if computador == 0:
+    if escolha == 0:
+        print('EMPATAMOS!')
+    elif escolha == 1:
+        print('VOCÊ GANHOU, PARABÈNS!')
+    else:
+        print('VOCÊ PERDEU, TENTE NOVAMENTE!')
+elif computador == 1:
+    if escolha == 0:
+        print('VOCÊ PERDEU, TENTE NOVAMENTE!')
+    elif escolha == 1:
+        print('EMPATAMOS!')
+    else:
+        print('VOCÊ GANHOU, PARABÈNS!')
+elif computador == 2:
+    if escolha == 0:
+        print('VOCÊ GANHOU, PARABÉNS!')
+    elif escolha == 1:
+        print('VOCÊ PERDEU, TENTE NOVAMENTE!')
+    else:
+        print('EMPATAMOS!')
+
+# Exercicio 45
+
+# Exercicio 46
+
+# Exercicio 47
+
+# Exercicio 48
+
+# Exercicio 49
+
+# Exercicio 50
+
+# Exercicio 51
+
+# Exercicio 52
+
+# Exercicio 53
+
+# Exercicio 54
+
+# Exercicio 55
+
+# Exercicio 56
+
+# Exercicio 57
+
+# Exercicio 58
+
+# Exercicio 59
+
+# Exercicio 60
